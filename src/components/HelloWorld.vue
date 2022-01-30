@@ -1,35 +1,87 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <b-card-group deck>
+      <b-card
+          footer="$150 /night"
+          footer-tag="footer"
+          title="Modern English Basement Apartment"
+          img-src="https://wander-lush.org/wp-content/uploads/2021/01/Medellin-Airbnb-Penthouse-in-Laureles.jpg"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2"
+      >
+        <b-card-text>
+          Good vibes of the city, catch the sunset from the rooftop.
+        </b-card-text>
+        <b-list-group>
+          <b-list-group-item>Wifi, Kitchen, Heating</b-list-group-item>
+          <b-list-group-item>Free Parking lot</b-list-group-item>
+          <b-list-group-item>Gym and Swimming pool</b-list-group-item>
+        </b-list-group>
+        <br>
+        <b-button href="#" variant="info" v-b-modal.modal-1>Book a stay</b-button>
+        <b-modal id="modal-1" title="Payment Confirmation">
+          <p class="my-4">You have just booked your Vuebnb</p>
+        </b-modal>
+      </b-card>
+      <!-- end of card 1 -->
+      <b-card
+          footer="$200 /night"
+          footer-tag="footer"
+          title="Comfy 1 Bedroom Condo Downtown"
+          img-src="https://media.cntraveler.com/photos/5e9907c14ab09800086faf63/master/pass/airbnb-view-37143825.jpg"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2"
+      >
+        <b-card-text>
+          Quiet neigborhood, host parties and invite friends over.
+        </b-card-text>
+        <b-list-group>
+          <b-list-group-item>Wifi, Kitchen, Heating</b-list-group-item>
+          <b-list-group-item>Free Parking lot</b-list-group-item>
+          <b-list-group-item>Gym and Swimming pool</b-list-group-item>
+        </b-list-group>
+        <br>
+        <b-button href="#" variant="info" v-b-modal.modal-2>Book a stay</b-button>
+        <b-modal id="modal-2" title="Payment Confirmation">
+          <p class="my-4">You have just booked your Vuebnb</p>
+        </b-modal>
+      </b-card>
+      <!-- end of card 2 -->
+      <b-card
+          footer="$100 /night"
+          footer-tag="footer"
+          title="Private Spacious Retreat in Great Location"
+          img-src="https://media.cntraveler.com/photos/5de7dbee45a09000087e427f/master/pass/airbnb-9232684-los-angeles.jpg"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style="max-width: 20rem;"
+          class="mb-2"
+      >
+        <b-card-text>
+          Greenry and zen is all you feel here, we got a bottler.
+        </b-card-text>
+        <b-list-group>
+          <b-list-group-item>Wifi, Kitchen, Heating</b-list-group-item>
+          <b-list-group-item>Free Parking lot</b-list-group-item>
+          <b-list-group-item>Gym and Swimming pool</b-list-group-item>
+        </b-list-group>
+        <br>
+        <b-button href="#" variant="info" v-b-modal.modal-3>Book a stay</b-button>
+        <b-modal id="modal-3" title="Payment Confirmation">
+          <p class="my-4">You have just booked your Vuebnb</p>
+        </b-modal>
+      </b-card>
+      <!-- end of card 3 -->
+    </b-card-group>
   </div>
 </template>
-
 <script>
 export default {
   name: 'HelloWorld',
@@ -38,21 +90,10 @@ export default {
   }
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+.hello {
+  margin-left: 90px;
+  padding-left: 20px;
 }
 </style>
